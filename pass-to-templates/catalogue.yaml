@@ -1,0 +1,9 @@
+appName: catalogue
+cfg_data:
+  MONGO: "true"
+  MONGO_URL: "mongodb://172.31.66.149:27017/catalogue"
+schema:
+  enabled: true
+
+schema_files:
+ - db/master-data:js

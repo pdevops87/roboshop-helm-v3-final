@@ -1,0 +1,11 @@
+appName: shipping
+cfg_data:
+  CART_ENDPOINT: "cart:8080"
+  DB_HOST: "172.31.66.194"
+schema:
+  enabled: true
+
+schema_files:
+  - db/app-user.sql
+  - db/schema.sql
+  - db/master-data.sql

@@ -1,0 +1,5 @@
+appName: user
+cfg_data:
+  MONGO: "catalogue"
+  MONGO_URL: "mongodb://172.31.66.149:27017/users"
+  REDIS_URL: "redis://172.31.69.229:6379"
