@@ -1,4 +1,6 @@
 appName: payment
+schema:
+  enabled: false
 cfg_data:
   CART_HOST: "cart"
   CART_PORT: "8080"

@@ -3,3 +3,5 @@ cfg_data:
   CATALOGUE_HOST: "catalogue"
   CATALOGUE_PORT: "8080"
   REDIS_HOST: "172.31.69.229"
+schema:
+  enabled: false

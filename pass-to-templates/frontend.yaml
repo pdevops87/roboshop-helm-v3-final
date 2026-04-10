@@ -1,5 +1,9 @@
 appName: frontend
 port: 80
+service:
+  type: LoadBalancer
+schema:
+  enabled: false
 cfg_data:
   CATALOGUE_HOST: "catalogue"
   CATALOGUE_PORT: "8080"

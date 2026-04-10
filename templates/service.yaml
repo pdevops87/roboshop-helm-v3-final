@@ -8,4 +8,4 @@ spec:
   ports:
     - port: {{ .Values.port }} # Service port
       targetPort: {{ .Values.port }}  # Pod container port
-  type: ClusterIP # by default cluster ip
+  type: {{ .Values.service.type }} # by default cluster ip

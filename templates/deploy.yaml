@@ -19,7 +19,7 @@ spec:
           image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .Values.appName }}
           envFrom:
             - configMapRef:
-                name: {{ .Values.appName }}-cmap
+                name: {{ .Values.appName }}
           env:
             - name: INSTANA_ENABLED
               value: "false"
