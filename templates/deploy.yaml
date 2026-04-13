@@ -24,3 +24,9 @@ spec:
             - name: INSTANA_ENABLED
               value: "false"
 
+
+# based on image version only imagePullPolicy will change
+
+# if an imagePullPolicy:latest this is for image:latest(default Policy)
+# image:v1 then internally imagePullPolicy:IfNotPresent(default Policy)
+
