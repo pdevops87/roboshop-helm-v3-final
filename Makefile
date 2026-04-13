@@ -1,4 +1,5 @@
 install:
+  git pull
   helm upgrade -i frontend . -f pass-to-templates/frontend.yaml
   helm upgrade -i catalogue . -f pass-to-templates/catalogue.yaml
   helm upgrade -i cart . -f pass-to-templates/cart.yaml
