@@ -7,16 +7,17 @@ spec:
   template:
     spec:
       containers:
-      {{- range .Values.SCHEMA_FILES }}
-        - name: {{ $.Values.appName }}
+        - name: {{ .Values.appName }}
           image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-load
           env:
-            - name: SCHEMA_FILES
-              value: {{ . | quote }}
+          {{- range .Values.SCHEMA_FILES }}
+          - name: SCHEMA_FILES
+            value: {{ . | quote }}
+
           envFrom:
             - configMapRef:
                 name: {{ $.Values.appName }}
-      {{- end }}
+          {{- end }}
       restartPolicy: Never
   backoffLimit: 0
-{{ end }}
+  {{ end }}
