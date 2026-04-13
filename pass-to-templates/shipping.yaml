@@ -5,7 +5,7 @@ cfg_data:
 schema:
   enabled: true
 
-schema_files:
+SCHEMA_FILES:
   - db/app-user.sql
   - db/schema.sql
   - db/master-data.sql

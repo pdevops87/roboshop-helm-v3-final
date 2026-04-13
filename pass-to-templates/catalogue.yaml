@@ -5,9 +5,9 @@ cfg_data:
   DB_TYPE: "mongo"
   APP_GIT_URL: "https://github.com/roboshop-devops-project-v3/catalogue"
   DB_HOST: "172.31.29.12"
-
+  SCHEMA_FILE: "db/master-data.js"
 schema:
   enabled: true
 
-schema_files:
+SCHEMA_FILES:
  - db/master-data:js
