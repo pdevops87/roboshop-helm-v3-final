@@ -5,7 +5,11 @@ cfg_data:
 schema:
   enabled: true
 
-SCHEMA_FILES:
-  - db/app-user.sql
-  - db/schema.sql
-  - db/master-data.sql
+job:
+  containers:
+    - name: app-user
+      file_name: db/app-user.sql
+    - name: schema
+      file_name: db/schema.sql
+    - name: master-data
+      file_name: db/master-data.sql

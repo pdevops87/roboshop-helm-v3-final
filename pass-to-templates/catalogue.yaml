@@ -8,6 +8,9 @@ cfg_data:
   SCHEMA_FILE: "db/master-data.js"
 schema:
   enabled: true
+job:
+  containers:
+    - name: app-user
+      file_name: db/master-data.js
 
-SCHEMA_FILES:
- - db/master-data:js
+
