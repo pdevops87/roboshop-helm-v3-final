@@ -8,9 +8,9 @@ install:
 
 
 uninstall:
-   helm upgrade -i frontend
-   helm upgrade -i catalogue
-   helm upgrade -i cart
-   helm upgrade -i user
-   helm upgrade -i shipping
-   helm upgrade -i payment
+   helm uninstall frontend
+   helm uninstall catalogue
+   helm uninstall cart
+   helm uninstall user
+   helm uninstall shipping
+   helm uninstall payment
