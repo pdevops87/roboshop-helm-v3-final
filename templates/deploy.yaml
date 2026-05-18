@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
         - name: catalogue
-          image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .Values.appName }}
+          image: public.ecr.aws/u4j6q5s8/{{ .Values.appName }}:latest
+          imagePullPolicy: Always
           envFrom:
             - configMapRef:
                 name: {{ .Values.appName }}
@@ -29,4 +30,7 @@ spec:
 
 # if an imagePullPolicy:latest this is for image:latest(default Policy)
 # image:v1 then internally imagePullPolicy:IfNotPresent(default Policy)
+#Note: ImagePullPolicy:Always will pull the image latest one every time but performance wise it will low.
+
+
 
