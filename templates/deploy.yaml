@@ -15,7 +15,7 @@ spec:
         appName: {{ .Values.appName }}
     spec:
       containers:
-        - name: catalogue
+        - name: {{ .Values.appName }}
           image: public.ecr.aws/u4j6q5s8/{{ .Values.appName }}:latest
           imagePullPolicy: Always
           envFrom:
