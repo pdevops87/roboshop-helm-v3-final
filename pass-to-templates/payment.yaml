@@ -6,6 +6,6 @@ cfg_data:
   CART_PORT: "8080"
   USER_HOST: "user"
   USER_PORT: "8080"
-  AMQP_HOST: "rabbitmq-dev.pdevops78.online"
+  AMQP_HOST: "172.31.5.201"
   AMQP_USER: "roboshop"
   AMQP_PASS: "roboshop123"

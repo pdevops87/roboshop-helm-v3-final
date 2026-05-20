@@ -1,7 +1,7 @@
 appName: shipping
 cfg_data:
   CART_ENDPOINT: "cart:8080"
-  DB_HOST: "mysql-dev.pdevops78.online"
+  DB_HOST: "172.31.13.238"
   DB_TYPE:  "mysql"
 schema:
   enabled: true
