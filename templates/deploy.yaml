@@ -15,6 +15,13 @@ spec:
         appName: {{ .Values.appName }}
     spec:
       containers:
+      {{- if eq .Values.environment "frontend" }}
+        - name: nginx-exporter
+          image: nginx/nginx-prometheus-exporter:latest
+          args:
+            # The exporter uses this IP to connect to Nginx
+            - -nginx.scrape-uri=http://127.0.0/health
+      {{- end }}
         - name: {{ .Values.appName }}
           image: public.ecr.aws/u4j6q5s8/{{ .Values.appName }}:v1
           imagePullPolicy: Always
