@@ -6,11 +6,11 @@ spec:
   selector:
     appName: {{ .Values.appName }}
   ports:
-  {{- if eq .Values.environment "frontend" }}
+  {{- if eq .Values.appName "frontend" }}
   - port: 9113 # Service port
     targetPort: 9113
     name: metrics
-  {{-end }}
+  {{- end }}
     - port: {{ .Values.port }} # Service port
       targetPort: {{ .Values.port }}  # Pod container port
       name: default
