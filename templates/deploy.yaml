@@ -27,7 +27,7 @@ spec:
        - name: {{ .Values.appName }}
          image: public.ecr.aws/u4j6q5s8/{{ .Values.appName }}:v1
          ports:
-           - containerPort: {{ .Values.port }} # Or whatever your application port is
+           - containerPort: 80 # Or whatever your application port is
              name: default
          imagePullPolicy: Always
          envFrom:
