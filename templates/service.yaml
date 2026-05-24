@@ -9,7 +9,7 @@ spec:
 {{- if eq .Values.appName "frontend" }}
    - port: 9113 # Service port
      targetPort: 9113
-    name: metrics
+     name: metrics
 {{- end }}
     - port: {{ .Values.port }} # Service port
       targetPort: {{ .Values.port }}  # Pod container port
