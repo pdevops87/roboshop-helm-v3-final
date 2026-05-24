@@ -4,6 +4,7 @@ metadata:
   name: {{ .Values.appName }}
 spec:
   selector:
+  type: {{ .Values.service.type }}
     app: {{ .Values.appName }}
   ports:
     - port: {{ .Values.port }}
