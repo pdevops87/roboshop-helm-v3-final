@@ -26,6 +26,9 @@ spec:
        {{- end }}
         - name: {{ .Values.appName }}
           image: public.ecr.aws/u4j6q5s8/{{ .Values.appName }}:v1
+          ports:
+            - containerPort: {{ .Values.port }}
+              name: default
           imagePullPolicy: Always
           envFrom:
             - configMapRef:
