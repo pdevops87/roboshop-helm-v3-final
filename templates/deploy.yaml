@@ -22,7 +22,7 @@ spec:
             - containerPort: {{ .Values.port }}
               name: metrics
           args:
-            - "--nginx.scrape-uri=127.0.0.1/health"
+            - "--nginx.scrape-uri=127.0.0.1"
       {{- end }}
         - name: {{ .Values.appName }}
           image: public.ecr.aws/u4j6q5s8/{{ .Values.appName }}:v1
