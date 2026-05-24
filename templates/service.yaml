@@ -4,15 +4,9 @@ metadata:
   name: {{ .Values.appName }}
 spec:
   selector:
- 
     app: {{ .Values.appName }}
   ports:
     - port: {{ .Values.port }}
       targetPort: {{ .Values.port }}
       name: default
-  {{ if eq .Values.appName "frontend" }}
-    - port: 9113
-      targetPort: 9113
-      name: metrics
-    {{ end }}
   type: {{ .Values.service.type }}
