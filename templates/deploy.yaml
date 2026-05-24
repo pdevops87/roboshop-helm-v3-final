@@ -24,19 +24,18 @@ spec:
          args:
            - "--nginx.scrape-uri=http://127.0.0.1"
       {{ end }}
-        - name: {{ .Values.appName }}
-          image: public.ecr.aws/u4j6q5s8/{{ .Values.appName }}:v1
-          ports:
-            - containerPort: {{ .Values.port }} # Or whatever your application port is
-              name: default
-          imagePullPolicy: Always
-          envFrom:
-            - configMapRef:
-                name: {{ .Values.appName }}
-          env:
-            - name: INSTANA_ENABLED
-              value: "false"
-
+       - name: {{ .Values.appName }}
+         image: public.ecr.aws/u4j6q5s8/{{ .Values.appName }}:v1
+         ports:
+           - containerPort: {{ .Values.port }} # Or whatever your application port is
+             name: default
+         imagePullPolicy: Always
+         envFrom:
+           - configMapRef:
+               name: {{ .Values.appName }}
+         env:
+           - name: INSTANA_ENABLED
+             value: "false"
 
 # based on image version only imagePullPolicy will change
 
