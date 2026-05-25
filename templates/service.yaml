@@ -4,9 +4,8 @@ metadata:
   name: {{ .Values.appName }}
 spec:
   selector:
-    app: {{ .Values.appName }}
+    appName: {{ .Values.appName }}
   ports:
-    - port: {{ .Values.port }}
-      targetPort: {{ .Values.port }}
-      name: default
-  type: {{ .Values.service.type }}
+    - port: {{ .Values.port }} # Service port
+      targetPort: {{ .Values.port }}  # Pod container port
+  type: {{ .Values.service.type }} # by default cluster ip
